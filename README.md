@@ -6,7 +6,7 @@ In this online repository we provide:
 
 * a **runnable version** of the implemented approaches: the *evosuite.jar* file;
 * all the [tables][tables] with the full tables reporting the results described in the paper;
-* the raw data used to compute the statistics;
+* the script used to generate the tests;
 * a zipped folders with all the projects used in the empirical study.
 
 ### EvoSuite jar
@@ -18,7 +18,8 @@ We plan to release the full source code in case of acceptance.
 [Here][tables] we report the full tables that we did not completely included in the paper for the sake of space.
 
 #### Coverage and mutation score
-[This table](https://github.com/sealuzh/pmosa-replication/blob/master/tables/cov+mutation.csv) reports the branch coverage comparison between MOSA and, respectively, pMOSA and pMOSA. It reports the p-values obtained from the Wilcoxon test as well the effect size Â12. When Â12 > 0.5, it means that MOSA is better than pMOSA or MOSA; Â12 < 0.5 has the opposite meaning, while Â12 = 0.5 denotes that they are equals. We highlight the significantly better values in bold.
+[This table](https://github.com/sealuzh/pmosa-replication/blob/master/tables/coverage.csv) reports the branch coverage comparison between MOSA and pMOSA. It reports the p-values obtained from the Wilcoxon test as well the effect size Â12. When Â12 > 0.5, it means that MOSA is better than pMOSA or MOSA; Â12 < 0.5 has the opposite meaning, while Â12 = 0.5 denotes that they are equals. We highlight the significantly better values in bold.
+Similarly, [this table](https://github.com/sealuzh/pmosa-replication/blob/master/tables/mutation.csv) reports the same comparison for the mutation score.
 
 #### Running Time
 [This table](https://github.com/sealuzh/pmosa-replication/blob/master/tables/running-time.csv) reports the running time comparison (in milliseconds) between MOSA and pMOSA. The reported statistics are the same reported for Table 1.
@@ -35,9 +36,11 @@ The table reports only the statistically significantly values (p-value < 0.05).
 
 ### Generated Tests & Raw Data
 We include three folders, one for: 
+
 * [MOSA][mosa];
 * The approach using the preference criterion as a second objective [here][pmosa];
-* [pMOSA][amosa].
+* [pMOSA][amosa];
+ 
 All the generated tests are in stored in the correspondent _tests_ directories.
 The _raw-stats.csv_ files instead, reports the measured statistics regarding the generated tests (like coverage, mutation score, result size, number of generations and so on). It is the csv file that EvoSuite regurarly produce as output.
 
