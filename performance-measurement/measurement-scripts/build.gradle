@@ -1,0 +1,47 @@
+group 'ch.uzh.ifi.seal'
+version '1.0-SNAPSHOT'
+
+buildscript {
+    ext.kotlin_version = '1.2.31'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'application'
+
+mainClassName = 'ch.uzh.ifi.seal.PerfAwareUnitTestsEval.MainKt'
+
+defaultTasks 'run'
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib"
+    compile "com.github.javaparser:javaparser-core:3.5.17"
+    compile group: 'commons-cli', name: 'commons-cli', version: '1.4'
+    compile "com.beust:klaxon:2.1.13"
+    compile "com.opencsv:opencsv:4.0"
+    compile 'org.funktionale:funktionale-all:1.2'
+}
+
+run {
+    def clargs = System.getProperty("args")
+    if (clargs != null) {
+        args clargs.split(",")
+    }
+}

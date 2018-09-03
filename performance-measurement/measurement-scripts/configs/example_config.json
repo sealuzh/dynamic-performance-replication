@@ -1,0 +1,11 @@
+{
+  "projects": "/PATH/TO/PROJECTS",
+  "testFile": "/PATH/TO/TEST-FILE",
+  "testDir": "/PATH/TO/GENERATED-EVO-SUITE-TESTS",
+  "outDir": "/PATH/TO/OUT-DIR",
+  "approaches": ["approach1", "approach2"],
+  "forks": 1,
+  "verboseRun": true,
+  "transform": true,
+  "resultsToStdOut": true
+}
