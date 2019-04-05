@@ -12,7 +12,7 @@ In this online repository we provide:
 ### EvoSuite jar
 We built a custom EvoSuite version implementing the pDynaMOSA starting from [EvoSuite 1.0.6.][evosuite].
 To run the experiments reported in the paper, we relied on the bash scripts that you can find in the _scripts_ directory for every approach tested.
-The full source code can be found [here](https://github.com/giograno/evosuite)
+The full source code can be found [here](https://github.com/giograno/evosuite).
 
 ### Full Results
 [Here][tables] we report the full results for the three investigated research questions.

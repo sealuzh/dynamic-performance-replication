@@ -6,3 +6,7 @@ The directory [csv-results](https://github.com/sealuzh/dynamic-performance-repli
 We report as well the results for the non adaptive approach (`non-adaptive` directory).
 
 The directory [performance](https://github.com/sealuzh/dynamic-performance-replication/tree/master/results/performance) contains the full results about runtime and heap memory comparison. 
+
+## CSV-Files
+
+The csv files in this directory reports all the raw data extracted by EvoSuite ad the end of the generation process. We based all our analysis on those files.
