@@ -16,11 +16,12 @@ Once this command is executed, a menu appears end you need to select the version
 The menu is the follwing:
 
 ```
-Choose the version of MOSA/PerformanceMOSA that you want to execute
+Choose the version that you want to execute
 For more than one version, separate the number with a comma
-1 = MOSA
-2 = performance indicators as secondary objective
-3 = pMOSA
+1 = DYNAMOSA v.1.0.6
+2 = Performance DYNAMOSA v.1.0.6
+3 = Random approach
+4 = All sincular indicators
 ```
 
 The user has to choose 1 or more combination he wants to run.

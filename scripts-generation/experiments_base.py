@@ -127,22 +127,18 @@ def getEvoSuiteCall(seed, configId, config, project, clazz, id, strategy, coreIn
   result += ""+EVOSUITE+" "+strategy+" -class "+ clazz +" -seed "+str(seed)
 
   if ALGORITHM == 'PMOSA':
-    # parameters only for PMOSA
     result += ' -Dperformance_strategy='+LOOP_STRATEGY
     result += ' -Dperformance_combination_strategy='+COMBINATION_STRATEGY
-    result += ' -Ddominance_sorting='+DOMINANCE_SORT
-    if COMBINATION_STRATEGY=='DOMINANCE':
-      result += ' -Dconfiguration_id='+LOOP_STRATEGY+'_'+COMBINATION_STRATEGY+'_'+DOMINANCE_SORT
-    else:
-      result += ' -Dconfiguration_id='+LOOP_STRATEGY+'_'+COMBINATION_STRATEGY
+  elif ALGORITHM == 'PDMOSA':
+    result += ' -Dperformance_strategy='+LOOP_STRATEGY
   else:
-    # parameters only for MOSA
-    result += ' -Dconfiguration_id=MOSA'
+    # mosa and dynamosa only need configuration id
+    result += ' -Dconfiguration_id='+CONFIG_NAME
   
   # parameters in common
   result += " -projectCP " + class_path
-  result += ' -Dperformance_indicators=LOOP_COUNTER:METHOD_CALL:COVERED_METHOD_CALL:STATEMENTS_COUNTER:STATEMENTS_COVERED'
-  result += ' -Doutput_variables=TARGET_CLASS,criterion,configuration_id,Total_Goals,Total_Branches,Lines,Covered_Goals,Generations,Statements_Executed,Fitness_Evaluations,Tests_Executed,Generations,Total_Time,Size,Result_Size,Length,Result_Length,BranchCoverage,ObjectsInstantiations,StatementCovered,StatementCounter,MethodCall,CoveredMethodCall,LoopCounter,TestExecutionTime,Random_Seed'
+  result += ' -Dperformance_indicators='+INDICATORS
+  result += ' -Doutput_variables=TARGET_CLASS,criterion,configuration_id,Total_Branches,Lines,Covered_Goals,Generations,Statements_Executed,Fitness_Evaluations,Tests_Executed,Generations,Total_Time,Size,TestExecutionTime,Random_Seed,BranchCoverage,LineCoverage,WeakMutationScore,ExceptionCoverage,InputCoverage,OutputCoverage,MethodCoverage,MutationScore,'+OUTPUT
   result += " -Dgroup_id="+project
   result += " -Dalgorithm="+ALGORITHM
   result += " -Dsearch_budget="+str(TIME)
@@ -223,24 +219,22 @@ def createJobs(minSeed, maxSeed, configId, config, startNum, strategy="-generate
   return num
 
 
-TIMEOUT="10m"
+TIMEOUT="14m"
 
 # Fixed set of parameters to use in all jobs
 FIXED = " -mem 2500 \
   -Dplot=false \
   -Dtest_comments=false \
   -Dshow_progress=false \
-  -Dminimize=false \
-  -Dglobal_timeout=600 \
+  -Dminimize=true \
+  -Dglobal_timeout=60 \
   -Dassertions=true \
   -Dcoverage=TRUE \
-  -Dcriterion=BRANCH \
+  -Dcriterion=BRANCH:LINE:WEAKMUTATION:INPUT:OUTPUT:EXCEPTION:CBRANCH:METHOD \
   -Dshow_progress=false \
-  -Dassertions=false \
-  -Dassertion_timeout=600 \
+  -Dassertion_timeout=300 \
   -Dextra_timeout=60 \
   -Djunit_check_timeout=60 \
-  -Djunit_check=false \
   -Dclient_on_thread=false \
  "
 
