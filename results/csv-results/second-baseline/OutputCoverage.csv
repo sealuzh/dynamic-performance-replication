@@ -1,4 +1,4 @@
-"class","dynamosa","pdynamosa","p-value","d","magnitude"
+"class","dynamosa","adynamosa","p-value","d","magnitude"
 "org.fixsuite.message.Library",0.384615384615385,0.400491400491401,0.10527324242036,0.412681912681913,"small"
 "net.kencochrane.a4j.file.FileUtil",0.271115409413282,0.273760330578512,0.582465160805514,0.533607350096712,"negligible"
 "net.kencochrane.a4j.DAO.Product",0.975609756097561,0.939024390243902,0.242485707575629,0.536585365853659,"negligible"

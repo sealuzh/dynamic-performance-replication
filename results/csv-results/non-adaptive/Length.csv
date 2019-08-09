@@ -1,4 +1,4 @@
-"class","non-adaptive","pdynamosa","p-value","d","magnitude"
+"class","non-adaptive","adynamosa","p-value","d","magnitude"
 "com.werken.saxpath.XPathLexer",578.333333333333,554.787234042553,0.0494711823150647,0.670212765957447,"medium"
 "okhttp3.internal.http.HttpHeaders",172.428571428571,177.395348837209,0.516093103477538,0.441029900332226,"negligible"
 "umd.cs.shop.JSTerm",338.928571428571,390.625,0.000122179343003449,0.151785714285714,"large"

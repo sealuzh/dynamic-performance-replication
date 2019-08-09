@@ -20,7 +20,7 @@ proc=$3
 echo "Choose the version you want to execute"
 echo "For more than one version, separate the number with a comma"
 echo "1 = DYNAMOSA v.1.0.6"
-echo "2 = Performance DYNAMOSA v.1.0.6"
+echo "2 = Adaptive DYNAMOSA v.1.0.6"
 echo "3 = Random approach"
 echo "4 = All sincular indicators"
 read choice
@@ -36,9 +36,9 @@ do
 		echo './dynamosa/scripts/ubuntu_EvoSuite_0.sh' >> run.sh
 	fi
 	if [ "$i" == "2" ]; then
-		${python_cmd} scripts/PDYNAMOSA.py pdynamosa $seed1 $seed2 subject.txt 1 $proc	
-		echo 'chmod 777 pdynamosa/scripts/ubuntu_EvoSuite_0.sh' >> run.sh
-		echo './pdynamosa/scripts/ubuntu_EvoSuite_0.sh' >> run.sh
+		${python_cmd} scripts/PDYNAMOSA.py adynamosa $seed1 $seed2 subject.txt 1 $proc	
+		echo 'chmod 777 adynamosa/scripts/ubuntu_EvoSuite_0.sh' >> run.sh
+		echo './adynamosa/scripts/ubuntu_EvoSuite_0.sh' >> run.sh
 	fi
 	if [ "$i" == "3" ]; then
 		${python_cmd} scripts/RANDOM6.py random $seed1 $seed2 subject.txt 1 $proc	

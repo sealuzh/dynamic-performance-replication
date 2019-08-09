@@ -10,7 +10,7 @@ In this online repository we provide:
 * a zipped folders with all the projects used in the empirical study.
 
 ### EvoSuite jar
-We built a custom EvoSuite version implementing the pDynaMOSA starting from [EvoSuite 1.0.6.][evosuite].
+We built a custom EvoSuite version implementing the aDynaMOSA starting from [EvoSuite 1.0.6.][evosuite].
 To run the experiments reported in the paper, we relied on the bash scripts that you can find in the _scripts_ directory for every approach tested.
 The full source code can be found [here](https://github.com/giograno/evosuite).
 
