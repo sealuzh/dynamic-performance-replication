@@ -7,6 +7,7 @@ In this online repository we provide:
 * a **runnable version** of the implemented approaches: the *evosuite.jar* file;
 * all the [tables][tables] with the full tables reporting the results described in the paper;
 * the script used to generate the tests;
+* all the parameters [configuration][configuration] for replicability;
 * a zipped folders with all the projects used in the empirical study.
 
 ### EvoSuite jar
@@ -26,3 +27,4 @@ We also include two csv files indicating the exact test suites, amongst the gene
 Moreover, we include the source code used for the measurement as well the script used to process the raw data.
 
 [measurements]: https://github.com/sealuzh/dynamic-performance-replication/tree/master/performance-measurement/
+[configuration]: https://github.com/sealuzh/dynamic-performance-replication/blob/master/configuration/
