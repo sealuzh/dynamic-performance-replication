@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/146285168.svg)](https://zenodo.org/badge/latestdoi/146285168)
+
 # Replication Package
 
 This is the online appendix/replication package for the paper *"Testing with Fewer Resources: An Adaptive Approach to Performance-Aware Test-Case Generation"*.
